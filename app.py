@@ -4,8 +4,18 @@ import matplotlib.pyplot as plt
 from streamlit_option_menu import option_menu
 from pathlib import Path
 
+# Configure matplotlib for better styling
+plt.style.use('default')
+plt.rcParams['figure.facecolor'] = 'none'
+plt.rcParams['axes.facecolor'] = 'none'
+plt.rcParams['savefig.facecolor'] = 'none'
+plt.rcParams['text.color'] = 'white'
+plt.rcParams['axes.labelcolor'] = 'white'
+plt.rcParams['xtick.color'] = 'white'
+plt.rcParams['ytick.color'] = 'white'
+
 # Streamlit configuration
-st.set_page_config(page_title="Family Expense Tracker", page_icon="💰")
+st.set_page_config(page_title="MoneyMap - Family Finance Tracker", page_icon="💰")
 st.title("")  # Clear the default title
 
 # Path Settings
@@ -23,9 +33,33 @@ if "expense_tracker" not in session_state:
     # If not, create and initialize it
     session_state.expense_tracker = FamilyExpenseTracker()
 
-# Center-align the heading using HTML
+# Center-align the heading using HTML with enhanced styling
 st.markdown(
-    '<h1 style="text-align: center;">Family Expense Tracker</h1>',
+    '''
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <h1 style="
+            text-align: center; 
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            animation: gradientShift 3s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+        ">💰 MoneyMap 💰</h1>
+        <p style="
+            color: white; 
+            font-size: 1.3rem; 
+            font-weight: 300; 
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            margin-top: 0;
+        ">Track your family's finances with style and ease</p>
+    </div>
+    ''',
     unsafe_allow_html=True,
 )
 
@@ -187,19 +221,40 @@ elif selected == "Data Visualization":
         total = sum(values)
         percentages = [(value / total) * 100 for value in values]
 
-        # Create a smaller pie chart with a transparent background
-        fig, ax = plt.subplots(figsize=(3, 3), dpi=300)
-        ax.pie(
+        # Create a beautiful pie chart with modern styling
+        fig, ax = plt.subplots(figsize=(8, 6), dpi=300)
+        
+        # Modern color palette
+        colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd']
+        
+        wedges, texts, autotexts = ax.pie(
             percentages,
             labels=expenses,
             autopct="%1.1f%%",
             startangle=140,
-            textprops={"fontsize": 6, "color": "white"},
+            colors=colors[:len(percentages)],
+            textprops={"fontsize": 12, "color": "white", "fontweight": "bold"},
+            explode=[0.05] * len(percentages),  # Slight separation between slices
+            shadow=True,
+            wedgeprops={'edgecolor': 'white', 'linewidth': 2}
         )
-        ax.set_title("Expense Distribution", fontsize=12, color="white")
+        
+        # Enhance text styling
+        for autotext in autotexts:
+            autotext.set_color('white')
+            autotext.set_fontweight('bold')
+            autotext.set_fontsize(11)
+        
+        for text in texts:
+            text.set_color('white')
+            text.set_fontweight('bold')
+            text.set_fontsize(11)
+        
+        ax.set_title("Expense Distribution", fontsize=18, color="white", fontweight="bold", pad=20)
 
         # Set the background color to be transparent
         fig.patch.set_facecolor("none")
+        ax.set_facecolor("none")
 
         # Display the pie chart in Streamlit
         st.pyplot(fig)

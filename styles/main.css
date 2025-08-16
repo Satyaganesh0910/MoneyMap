@@ -11,9 +11,238 @@ header {
     visibility: hidden;
 }
 
-/* Page Background Added */
+/* Modern Cool Background with Animated Gradient */
 [data-testid="stAppViewContainer"] {
-    background-color: #444cf755;
-    opacity: 0.8;
-    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #000000 10px), repeating-linear-gradient(#00000055, #000000);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main Content Styling */
+.main .block-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography Improvements */
+h1 {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem !important;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2.2rem !important;
+    font-weight: 600 !important;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem !important;
+}
+
+h3 {
+    font-size: 1.8rem !important;
+    font-weight: 500 !important;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Elements */
+p, div, span {
+    font-size: 1.1rem !important;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Elements Styling */
+.stTextInput > div > div > input {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+    padding: 0.8rem !important;
+    backdrop-filter: blur(5px);
+}
+
+.stTextInput > div > div > input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.stNumberInput > div > div > input {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+    padding: 0.8rem !important;
+    backdrop-filter: blur(5px);
+}
+
+/* Selectbox Styling */
+.stSelectbox > div > div > div {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+    backdrop-filter: blur(5px);
+}
+
+/* Button Styling */
+.stButton > button {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
+    border: none !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    padding: 0.8rem 2rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+    background: linear-gradient(45deg, #ff5252, #26a69a) !important;
+}
+
+/* Checkbox Styling */
+.stCheckbox > div > div {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(5px);
+}
+
+/* Date Input Styling */
+.stDateInput > div > div > input {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+    padding: 0.8rem !important;
+    backdrop-filter: blur(5px);
+}
+
+/* Expander Styling */
+.streamlit-expanderHeader {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+    padding: 1rem !important;
+    backdrop-filter: blur(5px);
+}
+
+.streamlit-expanderContent {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 10px !important;
+    padding: 1rem !important;
+    margin-top: 0.5rem !important;
+}
+
+/* Navigation Menu Styling */
+.css-1d391kg {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 15px !important;
+    padding: 0.5rem !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Metric Cards Styling */
+[data-testid="metric-container"] {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 15px !important;
+    padding: 1.5rem !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-testid="metric-container"] label {
+    color: white !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="metric-container"] div {
+    color: white !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+}
+
+/* Success and Error Messages */
+.stAlert {
+    border-radius: 10px !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+}
+
+/* Info Messages */
+.stInfo {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-size: 1.1rem !important;
+    backdrop-filter: blur(5px);
+}
+
+/* Column Headers */
+[data-testid="column"] > div {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    padding: 1rem !important;
+    margin: 0.5rem !important;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .main .block-container {
+        padding: 1rem !important;
+        margin: 0.5rem !important;
+    }
+    
+    .stButton > button {
+        font-size: 1rem !important;
+        padding: 0.6rem 1.5rem !important;
+    }
 }

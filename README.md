@@ -1,106 +1,131 @@
-<h1 align="center">FAMILY EXPENSE TRACKER 🏦</h1>
-<p align="center">
-    <a href="https://github.com/SVijayB/PyHub"><img src="assets/logo-hacktober.svg" alt="Logo" border="0"></a><br>
-    <a href="https://github.com/SVijayB/PyHub"><img src="assets/pyLogo.png" alt="Logo" border="0"></a>
-</p>
+# 💰 MoneyMap - Family Finance Tracker
 
-<div align="center">
+A beautiful, modern web application designed to help families track their earnings and expenses with style. Built with Streamlit and enhanced with stunning modern design.
 
-![https://github.com/sree-hari-s/Expense-Tracker/network/members](https://img.shields.io/github/forks/sree-hari-s/Expense-Tracker?color=green) &nbsp;
-![https://github.com/sree-hari-s/Expense-Tracker/graphs/issues](https://img.shields.io/github/issues/sree-hari-s/Expense-Tracker)  &nbsp;
-![https://github.com/sree-hari-s/Expense-Tracker/graphs/contributors](https://img.shields.io/github/contributors/sree-hari-s/Expense-Tracker) &nbsp;
-![https://github.com/sree-hari-s/Expense-Tracker/stargazers](https://img.shields.io/github/stars/sree-hari-s/Expense-Tracker?color=red) &nbsp;
-![https://github.com/sree-hari-s/Expense-Tracker/watchers](https://img.shields.io/github/watchers/sree-hari-s/Expense-Tracker?color=yellow) &nbsp;
-![https://github.com/sree-hari-s/Expense-Tracker/license](https://img.shields.io/github/license/sree-hari-s/Expense-Tracker) &nbsp;
-[![code style: black](https://img.shields.io/badge/code%20style-black-000.svg)](https://github.com/psf/black) &nbsp;
-</div>
+## ✨ Features
 
-<div align="center">
-Welcome to the Family Expense Tracker - a simple Python project designed to help you keep track of your family members' earnings and expenses. This tool allows you to effortlessly manage family finances by adding members, recording their earnings, and calculating the remaining balance after deducting expenses.
-</div>
+- **Family Member Management**: Add and track family members' earnings
+- **Expense Tracking**: Categorize and monitor family expenses
+- **Beautiful Visualizations**: Modern pie charts with animated data
+- **Real-time Balance**: Instant calculation of remaining balance
+- **Modern UI**: Glass morphism design with animated gradients
+- **Responsive Design**: Works perfectly on all devices
 
-## Table of Contents
+## 🚀 Live Demo
 
-- 📑[Table of Contents](#table-of-contents)
-- 🧾[Introduction](#introduction)
-- ✨[Features](#features)
-- 🛠️[How to Use](#how-to-use)
-- ⚙️[Installation](#installation)
-- 🙌[How to Contribute](#how-to-contribute)
-- 📝[License](#license)
+**🌐 Public Application Link**: [MoneyMap Live Demo](https://moneymap-app.streamlit.app/)
 
-## Introduction
+## 🛠️ Installation & Setup
 
-Managing a family's finances can be challenging, especially when dealing with multiple sources of income and various expenses. The Family Expense Tracker simplifies this task by providing a user-friendly interface to:
+### Local Development
 
-- 💼 Add Family Members
-- 💵 Record Earnings for Each Family Member
-- 📉 Track Expenses
-- 💰 Calculate Remaining Balance
-
-With this tool, you can easily monitor and manage your family's financial situation.
-
-## Features
-
-- **Add Family Members:** Start by adding the names of family members whose earnings and expenses you want to track.
-- **Record Earnings:** Record the earnings for each family member. The tracker calculates the total earnings for the family.
-- **Track Expenses:** Log various expenses, and the tracker deducts these from the total earnings, showing the remaining balance.
-- **User-Friendly Interface:**
-
-The Expense Tracker features a simple and easy-to-navigate interface, ensuring a seamless user experience, allowing you to effortlessly manage your family's financial data.
-
-## How to Use
-
-1. **Add Family Members:**
-   - Run the [application](https://expense-tracker-alpha.streamlit.app/) and choose the option to add family members.
-   - Enter the names of the family members you want to track.
-
-2. **Record Earnings:**
-   - Select the option to record earnings.
-   - Specify the earnings for each family member.
-
-3. **Track Expenses:**
-   - Log expenses for various categories (e.g., groceries, bills).
-   - The application automatically calculates the remaining balance after deducting expenses.
-
-## Installation
-
-1. Clone the repository:
-
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/sree-hari-s/Expense-Tracker.git
-   cd Expense-Tracker
+   git clone https://github.com/yourusername/MoneyMap.git
+   cd MoneyMap
    ```
 
-2. Install the required dependencies
-
+2. **Install dependencies:**
    ```bash
-    pip install -r requirements.txt
-    ```
+   pip install -r requirements.txt
+   ```
 
-3. Run the Application
+3. **Run the application:**
+   ```bash
+   streamlit run app.py
+   ```
 
-   Now you can run the Family Expense Tracker application using Streamlit:
+4. **Open in browser:**
+   Navigate to `http://localhost:8501`
 
-    ```bash
-    streamlit run app.py
-    ```
+## 🎨 Design Highlights
 
-## How to Contribute
+- **Animated Gradient Background**: Beautiful color transitions
+- **Glass Morphism**: Modern transparent containers
+- **Enhanced Typography**: Large, readable fonts
+- **Interactive Elements**: Smooth hover animations
+- **Responsive Layout**: Mobile-friendly design
 
-- If you wish to [contribute](CONTRIBUTING.md) in any way, feel free to get involved. You can suggest improvements or provide support and encouragement by [opening an issue](https://github.com/sree-hari-s/Expense-Tracker/issues).
+## 📱 How to Use
 
-## Contributors
+1. **Add Family Members**: Enter names and earnings
+2. **Track Expenses**: Categorize and log expenses
+3. **View Analytics**: See expense distribution charts
+4. **Monitor Balance**: Track remaining funds
 
-Thank you all for, your contributions. Your contributions hold immense value for our project, and we are genuinely thankful for your valuable support. Your unwavering commitment and hard work are truly commendable.
+## 🌟 Key Features
 
-<p align="center">
-  <a href="https://github.com/sree-hari-s/Expense-Tracker/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=sree-hari-s/Expense-Tracker" alt="Contributors" />
-  </a>
-</p>
+- **Data Entry**: Easy family member and expense management
+- **Data Overview**: Comprehensive financial summary
+- **Data Visualization**: Beautiful charts and analytics
+- **Real-time Updates**: Instant balance calculations
 
+## 🚀 Deployment Options
 
-## License
+### Option 1: Streamlit Cloud (Recommended)
 
-This project is licensed under the terms of the [MIT License](LICENSE).
+1. **Push to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Initial MoneyMap release"
+   git push origin main
+   ```
+
+2. **Deploy on Streamlit Cloud:**
+   - Go to [share.streamlit.io](https://share.streamlit.io)
+   - Sign in with GitHub
+   - Click "New app"
+   - Select your repository: `yourusername/MoneyMap`
+   - Set main file path: `app.py`
+   - Click "Deploy"
+
+3. **Get Public Link:**
+   Your app will be available at: `https://your-app-name.streamlit.app`
+
+### Option 2: Heroku
+
+1. **Create Procfile:**
+   ```
+   web: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
+   ```
+
+2. **Deploy to Heroku:**
+   ```bash
+   heroku create your-moneymap-app
+   git push heroku main
+   ```
+
+### Option 3: Railway
+
+1. **Connect GitHub repository**
+2. **Auto-deploy on push**
+3. **Get instant public URL**
+
+## 📊 Technologies Used
+
+- **Frontend**: Streamlit, HTML/CSS
+- **Backend**: Python
+- **Visualization**: Matplotlib
+- **Styling**: Modern CSS with Glass Morphism
+- **Deployment**: Streamlit Cloud
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgments
+
+- Original project by [sree-hari-s](https://github.com/sree-hari-s/Expense-Tracker)
+- Enhanced with modern design principles
+- Built with Streamlit framework
+
+---
+
+**💰 Start tracking your family's finances with MoneyMap today! 💰**
