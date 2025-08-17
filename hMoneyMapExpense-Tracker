@@ -1,0 +1,5 @@
+[33m194ca93[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Initial MoneyMap release with modern design and enhanced styling
+[33mc78804b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update .gitignore
+[33m7680e44[m feat - CSS file added, new look to the page (#40)
+[33mf17ed11[m fix-Data Overview UI updated
+[33m8389602[m secrets.toml added

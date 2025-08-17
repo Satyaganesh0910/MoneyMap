@@ -18,12 +18,34 @@ plt.rcParams['ytick.color'] = 'white'
 st.set_page_config(page_title="MoneyMap - Family Finance Tracker", page_icon="💰")
 st.title("")  # Clear the default title
 
-# Path Settings
-current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-css_file = current_dir / "styles" / "main.css"
-
-with open(css_file) as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+# Path Settings - with error handling
+try:
+    current_dir = Path(__file__).parent if "__file__ in locals()" else Path.cwd()
+    css_file = current_dir / "styles" / "main.css"
+    
+    if css_file.exists():
+        with open(css_file) as f:
+            st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+    else:
+        # Fallback CSS if file doesn't exist
+        st.markdown("""
+        <style>
+        .main {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+except Exception as e:
+    # Fallback CSS if there's any error
+    st.markdown("""
+    <style>
+    .main {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # Create a session state object
 session_state = st.session_state
