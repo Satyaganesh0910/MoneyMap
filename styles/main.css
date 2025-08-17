@@ -11,238 +11,160 @@ header {
     visibility: hidden;
 }
 
-/* Modern Cool Background with Animated Gradient */
+/* Clean, Normal Background */
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    background: #f0f2f6;
     min-height: 100vh;
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 /* Main Content Styling */
 .main .block-container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: white;
+    border-radius: 8px;
     padding: 2rem;
     margin: 1rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Typography Improvements */
+/* Typography - Clean and Readable */
 h1 {
-    font-size: 3rem !important;
-    font-weight: 700 !important;
-    color: white !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 2rem !important;
-    letter-spacing: 2px;
+    font-size: 2.5rem !important;
+    font-weight: 600 !important;
+    color: #1f2937 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center;
 }
 
 h2 {
-    font-size: 2.2rem !important;
+    font-size: 1.8rem !important;
     font-weight: 600 !important;
-    color: white !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    margin-bottom: 1.5rem !important;
+    color: #1f2937 !important;
+    margin-bottom: 1rem !important;
 }
 
 h3 {
-    font-size: 1.8rem !important;
+    font-size: 1.4rem !important;
     font-weight: 500 !important;
-    color: white !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #1f2937 !important;
 }
 
 /* Text Elements */
 p, div, span {
-    font-size: 1.1rem !important;
-    color: white !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1rem !important;
+    color: #374151 !important;
+    line-height: 1.6;
 }
 
 /* Form Elements Styling */
 .stTextInput > div > div > input {
-    background: rgba(255, 255, 255, 0.2) !important;
-    border: 2px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 10px !important;
-    color: white !important;
-    font-size: 1.1rem !important;
-    padding: 0.8rem !important;
-    backdrop-filter: blur(5px);
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    color: #1f2937 !important;
+    font-size: 1rem !important;
+    padding: 0.75rem !important;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
 }
 
 .stTextInput > div > div > input::placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: #9ca3af !important;
 }
 
 .stNumberInput > div > div > input {
-    background: rgba(255, 255, 255, 0.2) !important;
-    border: 2px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 10px !important;
-    color: white !important;
-    font-size: 1.1rem !important;
-    padding: 0.8rem !important;
-    backdrop-filter: blur(5px);
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    color: #1f2937 !important;
+    font-size: 1rem !important;
+    padding: 0.75rem !important;
 }
 
-/* Selectbox Styling */
-.stSelectbox > div > div > div {
-    background: rgba(255, 255, 255, 0.2) !important;
-    border: 2px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 10px !important;
-    color: white !important;
-    font-size: 1.1rem !important;
-    backdrop-filter: blur(5px);
+.stNumberInput > div > div > input:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
 }
 
 /* Button Styling */
 .stButton > button {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
-    border: none !important;
-    border-radius: 15px !important;
+    background: #3b82f6 !important;
     color: white !important;
-    font-size: 1.2rem !important;
-    font-weight: 600 !important;
-    padding: 0.8rem 2rem !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    transition: background-color 0.2s !important;
 }
 
 .stButton > button:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
-    background: linear-gradient(45deg, #ff5252, #26a69a) !important;
+    background: #2563eb !important;
+}
+
+/* Selectbox Styling */
+.stSelectbox > div > div > select {
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    color: #1f2937 !important;
+    font-size: 1rem !important;
+    padding: 0.75rem !important;
 }
 
 /* Checkbox Styling */
-.stCheckbox > div > div {
-    background: rgba(255, 255, 255, 0.2) !important;
-    border: 2px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 8px !important;
-    backdrop-filter: blur(5px);
+.stCheckbox > div > div > label {
+    color: #374151 !important;
+    font-size: 1rem !important;
 }
 
 /* Date Input Styling */
 .stDateInput > div > div > input {
-    background: rgba(255, 255, 255, 0.2) !important;
-    border: 2px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 10px !important;
-    color: white !important;
-    font-size: 1.1rem !important;
-    padding: 0.8rem !important;
-    backdrop-filter: blur(5px);
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    color: #1f2937 !important;
+    font-size: 1rem !important;
+    padding: 0.75rem !important;
 }
 
 /* Expander Styling */
 .streamlit-expanderHeader {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 10px !important;
-    color: white !important;
-    font-size: 1.3rem !important;
-    font-weight: 600 !important;
-    padding: 1rem !important;
-    backdrop-filter: blur(5px);
-}
-
-.streamlit-expanderContent {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border-radius: 10px !important;
-    padding: 1rem !important;
-    margin-top: 0.5rem !important;
-}
-
-/* Navigation Menu Styling */
-.css-1d391kg {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 15px !important;
-    padding: 0.5rem !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Metric Cards Styling */
-[data-testid="metric-container"] {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 15px !important;
-    padding: 1.5rem !important;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-[data-testid="metric-container"] label {
-    color: white !important;
-    font-size: 1.2rem !important;
-    font-weight: 600 !important;
-}
-
-[data-testid="metric-container"] div {
-    color: white !important;
-    font-size: 2rem !important;
-    font-weight: 700 !important;
-}
-
-/* Success and Error Messages */
-.stAlert {
-    border-radius: 10px !important;
-    font-size: 1.1rem !important;
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 6px !important;
+    color: #1f2937 !important;
     font-weight: 500 !important;
 }
 
-/* Info Messages */
-.stInfo {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 10px !important;
-    color: white !important;
-    font-size: 1.1rem !important;
-    backdrop-filter: blur(5px);
+/* Dataframe Styling */
+.dataframe {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 6px !important;
 }
 
-/* Column Headers */
-[data-testid="column"] > div {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 10px !important;
-    padding: 1rem !important;
-    margin: 0.5rem !important;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+/* Success/Error Messages */
+.stAlert {
+    border-radius: 6px !important;
+    border: 1px solid !important;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem !important;
-    }
-    
-    h2 {
-        font-size: 1.8rem !important;
-    }
-    
-    .main .block-container {
-        padding: 1rem !important;
-        margin: 0.5rem !important;
-    }
-    
-    .stButton > button {
-        font-size: 1rem !important;
-        padding: 0.6rem 1.5rem !important;
-    }
+/* Navigation Menu */
+.css-1d391kg {
+    background: white !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Clean spacing */
+.element-container {
+    margin-bottom: 1rem !important;
+}
+
+/* Remove any remaining white text */
+* {
+    color: inherit !important;
 }

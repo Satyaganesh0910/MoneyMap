@@ -55,29 +55,21 @@ if "expense_tracker" not in session_state:
     # If not, create and initialize it
     session_state.expense_tracker = FamilyExpenseTracker()
 
-# Center-align the heading using HTML with enhanced styling
+# Center-align the heading using HTML with clean styling
 st.markdown(
     '''
     <div style="text-align: center; margin-bottom: 2rem;">
         <h1 style="
             text-align: center; 
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-            background-size: 300% 300%;
-            animation: gradientShift 3s ease infinite;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-size: 3.5rem;
-            font-weight: 800;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
-            letter-spacing: 3px;
+            color: #1f2937;
+            font-size: 2.5rem;
+            font-weight: 600;
             margin-bottom: 1rem;
         ">💰 MoneyMap 💰</h1>
         <p style="
-            color: white; 
-            font-size: 1.3rem; 
-            font-weight: 300; 
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            color: #6b7280; 
+            font-size: 1.1rem; 
+            font-weight: 400; 
             margin-top: 0;
         ">Track your family's finances with style and ease</p>
     </div>
